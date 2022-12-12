@@ -18,4 +18,6 @@ For the full challenges see https://www.adventofcode.com.
 | Year | Puzzles completed | Language |
 ├──────┼───────────────────┼──────────┤
 | 2021 |             45/50 |   Python |
+├──────┼───────────────────┼──────────┤
+| 2022 |         (Ongoing) |   Python |
 └──────┴───────────────────┴──────────┘
