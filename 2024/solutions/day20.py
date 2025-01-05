@@ -75,3 +75,24 @@ print(f"Day 20 part 1 example: {day20_part1(racetrack_example, 2)}")
 racetrack = file_to_list("2024/inputs/input20.txt")
 
 print(f"Day 20 part 1: {day20_part1(racetrack, 100)}")
+
+# Part 2 ----------------------------------------
+
+def day20_part2(racetrack, diff):
+    path = find_path(racetrack)
+    count_cheats = 0
+    for i in range(len(path)-diff):
+        point_a = path[i]
+        for j in range(i+1, len(path)):
+            point_b = path[j]
+            manhattan_distance = abs(point_a[0] - point_b[0]) + abs(point_a[1] - point_b[1])
+            if 0 <= manhattan_distance <= 20:
+                time_saved = j - i - manhattan_distance
+                if time_saved >= diff:
+                    count_cheats += 1
+    return count_cheats
+
+
+print(f"Day 20 part 2 example: {day20_part2(racetrack_example, 50)}")
+
+print(f"Day 20 part 2: {day20_part2(racetrack, 100)}")
